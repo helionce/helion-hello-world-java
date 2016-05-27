@@ -2,5 +2,5 @@
 # The only mandatory fields are name and path for simple Java web apps.
 applications:
 - name: helion-hello-world-java
-  mem: 512M
+  memory: 512M
   path: build/hello-world-java-1.0
