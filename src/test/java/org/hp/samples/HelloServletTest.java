@@ -1,21 +1,22 @@
 package org.hp.samples;
 
-public class Calculator {
+import junit.framework.Assert;
+import org.junit.Test;
 
-	public int sum(int a, int b) {
-		return a + b;
+public class HelloServletTest {
+
+	@Test
+	public void testMinus() {
+		Assert.assertEquals(0, 0);
 	}
 
-	public int minus(int a, int b) {
-		return a - b;  // ERROR!!!
+	@Test
+	public void testDivide() {
+		Assert.assertEquals(2, 2);
 	}
 
-	public int divide(int a, int b) {
-		return a / b;
+	@Test(expected = ArithmeticException.class)
+	public void testDivideWillThrowExceptionWhenDivideOnZero() {
+		int result = 3 / 0;
 	}
-
-	public int multiply(int a, int b) {
-		return a * b;
-	}
-
 }
